@@ -4,4 +4,10 @@
 
 {{#if activeLegislator}}
   {{legislator-detail legislator=activeLegislator sponsoredBills=sponsoredBills}}
+
+  {{#each totalPages as |page|}}
+    <button >{{page}}</button>
+  {{/each}}
+
+
 {{/if}}
