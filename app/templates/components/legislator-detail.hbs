@@ -8,10 +8,9 @@
   {{#if legislator.senate_class}}
     <li>Senate Class: {{legislator.senate_class}}</li>
   {{/if}}
-  <li {{action 'getBills' legislator.bioguide_id}}>Bills Sponsored</li>
+  <li>Bills Sponsored</li>
     <ul>
       {{#each sponsoredBills as |bill|}}
-      <!-- {{log sponsoredBills}} -->
         <li>{{bill.official_title}}</li>
       {{/each}}
     </ul>
