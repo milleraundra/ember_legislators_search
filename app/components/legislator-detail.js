@@ -7,12 +7,16 @@ export default Ember.Component.extend({
   sponsoredBills: null,
   actions: {
     getBills(legislatorId) {
-      var url = 'http://congress.api.sunlightfoundation.com/bills/search?sponsor_id=' + legislatorId + '&apikey=20a6df84a0644ffd8281c431f6c623bd';
+      var url = 'https://congress.api.sunlightfoundation.com/bills/search?sponsor_id=' + legislatorId + '&apikey=20a6df84a0644ffd8281c431f6c623bd';
+      var that = this; //binding
       return Ember.$.getJSON(url).then(function(responseJSON) {
-        console.log(responseJSON.results);
-        this.set('sponsoredBills', responseJSON.results);
-        // return responseJSON.results;
-      })
+        return responseJSON.results;
+      }).then(function(results) {
+        return that.set('sponsoredBills', results);
+      });
+        // };
+        // this.set('sponsoredBills', apiFunction(url));
+        // console.log("hello", this.get('sponsoredBills'));
     }
   }
 });

@@ -11,6 +11,7 @@
   <li {{action 'getBills' legislator.bioguide_id}}>Bills Sponsored</li>
     <ul>
       {{#each sponsoredBills as |bill|}}
+      <!-- {{log sponsoredBills}} -->
         <li>{{bill.official_title}}</li>
       {{/each}}
     </ul>
