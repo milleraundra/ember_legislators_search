@@ -1,1 +1,17 @@
-<h2>{{legislator.first_name}}</h2>
+<h2>{{fullName}}</h2>
+<ul>
+  <li>Party: {{legislator.party}}</li>
+  <li>Term Start: {{legislator.term_start}}</li>
+  <li>Term End: {{legislator.term_end}}</li>
+  <li>Chamber: {{legislator.chamber}}</li>
+  <li>Title: {{legislator.title}}</li>
+  {{#if legislator.senate_class}}
+    <li>Senate Class: {{legislator.senate_class}}</li>
+  {{/if}}
+  <li {{action 'getBills' legislator.bioguide_id}}>Bills Sponsored</li>
+    <ul>
+      {{#each sponsoredBills as |bill|}}
+        <li>{{bill.official_title}}</li>
+      {{/each}}
+    </ul>
+</ul>

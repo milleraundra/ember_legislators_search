@@ -2,6 +2,6 @@
   <div {{action 'showLegislator' legislator}}>{{legislator-preview legislator=legislator}}</div>
 {{/each}}
 
-{{#if activeLegislater !== null}}
+{{#if activeLegislator}}
   {{legislator-detail legislator=activeLegislator}}
 {{/if}}
