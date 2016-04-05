@@ -1,0 +1,7 @@
+{{#each model as |legislator|}}
+  <div {{action 'showLegislator' legislator}}>{{legislator-preview legislator=legislator}}</div>
+{{/each}}
+
+{{#if activeLegislater !== null}}
+  {{legislator-detail legislator=activeLegislator}}
+{{/if}}
