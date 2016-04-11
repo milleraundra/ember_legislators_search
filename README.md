@@ -13,6 +13,7 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
+
 ## Installation
 
 * `git clone <repository-url>` this repository
@@ -21,33 +22,24 @@ You will need the following things properly installed on your computer.
 * `bower install`
 
 ## Running / Development
+You will also need an API key from Sunlight Foundations.
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+1.  Sign up to receive your own [unique API key](http://sunlightfoundation.com/api/accounts/register/).
+2.  Collect this key from your email.
+3.  Once you have cloned this repository, create a new file named `.env` in the root directory of the project folder.
+4.  Add the following code to your `.env` file:
+`export apiKey="YOUR-API-KEY-HERE"`
+5. Run `source .env` in the terminal to include your new file.
+6. For full functionality, download this [free Chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+7. `ember server`
+8. Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Support and contact details
 
-Make use of the many generators for code, try `ember help generate` for more details
+If you have any questions, concerns, or suggestions, contact me directly at miller.aundra@gmail.com. Pull requests can be submitted directly to milleraundra on Github.
 
-### Running Tests
+### License
 
-* `ember test`
-* `ember test --server`
+The MIT License (MIT)
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Copyright (c) 2016 Aundra Miller
